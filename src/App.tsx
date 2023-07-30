@@ -1,17 +1,17 @@
 import logo from "./logo.svg"
 import { Counter } from "./features/counter/Counter"
 import "./App.css"
+import { Home } from "./features/home/home"
+import { Move } from "./features/timer/move"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
+      <h1>Xander Creative</h1>
+      <Home />
+      <Move />
+      {/* <Counter /> */}
+      {/* <span>
           <span>Learn </span>
           <a
             className="App-link"
@@ -48,8 +48,7 @@ function App() {
           >
             React Redux
           </a>
-        </span>
-      </header>
+        </span> */}
     </div>
   )
 }
