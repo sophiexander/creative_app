@@ -3,11 +3,12 @@ import { Counter } from "./features/counter/Counter"
 import "./App.css"
 import { Home } from "./features/home/home"
 import { Move } from "./features/timer/move"
+import * as uikit from "uikit"
 
 function App() {
   return (
     <div className="App">
-      <h1>Xander Creative</h1>
+      <h1 className="uk-heading-medium">Xander Creative</h1>
       <Home />
       <Move />
       {/* <Counter /> */}

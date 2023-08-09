@@ -1,11 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export function Move() {
-  const [time, setTime] = useState("")
+  const [date, setDate] = useState(new Date())
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
 
   var now = new Date()
+
+  useEffect(() => {
+    var timer = setInterval(() => setDate(new Date()), 1000)
+
+    return function cleanup() {
+      clearInterval(timer)
+    }
+  })
 
   //   setTime(now.toUTCString())
 
@@ -25,7 +33,7 @@ export function Move() {
     <div>
       <div>
         <h2>Movement Timer</h2>
-        <p>{now.toUTCString()}</p>
+        <p>{date.toUTCString()}</p>
         <button>Start timer</button>
       </div>
     </div>
