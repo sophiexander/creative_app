@@ -1,9 +1,9 @@
+import "uikit/dist/css/uikit.css"
 import logo from "./logo.svg"
 import { Counter } from "./features/counter/Counter"
 import "./App.css"
 import { Home } from "./features/home/home"
 import { Move } from "./features/timer/move"
-import * as uikit from "uikit"
 
 function App() {
   return (
