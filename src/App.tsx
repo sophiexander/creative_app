@@ -4,13 +4,16 @@ import { Counter } from "./features/counter/Counter"
 import "./App.css"
 import { Home } from "./features/home/home"
 import { Move } from "./features/timer/move"
+import PilatesHome from "./features/pilates/PilatesHome"
+import Navbar from "./features/navigation/Navbar"
 
 function App() {
   return (
     <div className="App">
-      <h1 className="uk-heading-medium">Xander Creative</h1>
+      <Navbar />
       <Home />
       <Move />
+      <PilatesHome />
       {/* <Counter /> */}
       {/* <span>
           <span>Learn </span>
