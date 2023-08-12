@@ -6,14 +6,53 @@ import { Home } from "./features/home/home"
 import { Move } from "./features/timer/move"
 import PilatesHome from "./features/pilates/PilatesHome"
 import Navbar from "./features/navigation/Navbar"
+import { useState } from "react"
 
-function App() {
+export default function App() {
+  const [showMove, setShowMove] = useState(false)
+  const [showPilates, setShowPilates] = useState(false)
+  const [showHome, setShowHome] = useState(true)
+
+  const handleClick = (buttonClicked: string) => {
+    console.log("buttonClicked", buttonClicked)
+    switch (buttonClicked) {
+      case "move": {
+        setShowPilates(false)
+        setShowHome(false)
+        setShowMove(true)
+        break
+      }
+      case "pilates": {
+        setShowMove(false)
+        setShowHome(false)
+        setShowPilates(true)
+        break
+      }
+      case "home": {
+        setShowMove(false)
+        setShowPilates(false)
+        setShowHome(true)
+        break
+      }
+    }
+
+    console.log(
+      "home: ",
+      showHome,
+      "move: ",
+      showMove,
+      "pilates: ",
+      showPilates,
+    )
+  }
+  // console.log(showMove)
+
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-      <Move />
-      <PilatesHome />
+      <Navbar handleClick={handleClick} />
+      {showHome && <Home />}
+      {showMove && <Move />}
+      {showPilates && <PilatesHome />}
       {/* <Counter /> */}
       {/* <span>
           <span>Learn </span>
@@ -56,5 +95,3 @@ function App() {
     </div>
   )
 }
-
-export default App
