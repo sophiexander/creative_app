@@ -34,6 +34,9 @@ export function Move() {
       <div>
         <h2>Movement Timer</h2>
         <p>{date.toUTCString()}</p>
+        <div className="uk-flex uk-flex-center uk-margin-large uk-text-large">
+          00:00:{date.getSeconds()}
+        </div>
         <button>Start timer</button>
       </div>
     </div>
