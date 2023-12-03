@@ -10,7 +10,7 @@ export default function Navbar({ handleClick }: Props) {
           <a
             className="uk-navbar-item uk-logo"
             aria-label="Back to Home"
-            onClick={() => handleClick("home")}
+            onClick={() => handleClick("shop")}
           >
             <h2 className="uk-heading-small">Xander Creative</h2>
           </a>
@@ -18,10 +18,10 @@ export default function Navbar({ handleClick }: Props) {
           <div className="uk-navbar-right uk-margin-right">
             <ul className="uk-navbar-nav">
               <li>
-                <a onClick={() => handleClick("move")}>StretchMinder</a>
+                <a onClick={() => handleClick("about")}>About</a>
               </li>
               <li>
-                <a onClick={() => handleClick("pilates")}>Pilates</a>
+                <a onClick={() => handleClick("contact")}>Contact</a>
                 {/* <a href="#">Pilates</a> */}
               </li>
             </ul>
