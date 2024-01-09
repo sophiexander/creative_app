@@ -6,16 +6,34 @@ import App from "./App"
 import "./index.css"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { About } from "./features/pages/about"
+import Navbar from "./features/navigation/Navbar"
+import PilatesHome from "./features/pilates/PilatesHome"
+import { Contact } from "./features/pages/contact"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "aboutme",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "pilates",
+        element: <PilatesHome />,
+      },
+    ],
   },
-  {
-    path: "aboutme",
-    element: <About />,
-  },
+
   {},
 ])
 
