@@ -2,7 +2,7 @@ import "uikit/dist/css/uikit.css"
 import logo from "./logo.svg"
 import { Counter } from "./features/counter/Counter"
 import "./App.css"
-import { Shop } from "./features/shop/shop"
+import { Index } from "./features/catalogue/Index"
 import { About } from "./features/pages/about"
 import PilatesHome from "./features/pilates/PilatesHome"
 import Navbar from "./features/navigation/Navbar"
@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Shop />
+      <Index />
     </div>
   )
 }
