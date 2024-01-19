@@ -3,17 +3,11 @@ import sunset from "../pilates/assets/sunset.jpg"
 import ItemCatalogue from "./ItemCatalogue"
 
 export function ItemPage() {
+  // A hook could be good here or selector to get the current item based on url?
   return (
     <div className="uk-flex-center">
       <h2 className="uk-padding-large">Catalogue</h2>
-      <div className="uk-margin-small" uk-grid>
-        <ItemCatalogue image={sunset} title="Leggy Frog" link={"leggy-frog"} />
-        <ItemCatalogue
-          image={sunset}
-          title="Pudding cat"
-          link={"pudding-cat"}
-        />
-      </div>
+      <div className="uk-margin-small" uk-grid></div>
     </div>
   )
 }
