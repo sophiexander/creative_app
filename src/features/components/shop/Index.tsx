@@ -1,5 +1,5 @@
 import { useState } from "react"
-import sunset from "../pilates/assets/sunset.jpg"
+import sunset from "../../pilates/assets/sunset.jpg"
 import ItemCatalogue from "./ItemCatalogue"
 
 export function Index() {
