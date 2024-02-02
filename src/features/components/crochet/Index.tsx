@@ -4,15 +4,9 @@ import ItemCatalogue from "./ItemCatalogue"
 
 export function Index() {
   return (
-    <div className="uk-flex-center">
-      <h2 className="uk-padding-large text-red-300">Catalogue</h2>
-      <div className="uk-margin-small" uk-grid>
+    <div className="place-items-center">
+      <div className="m-4" uk-grid>
         <ItemCatalogue image={sunset} title="Leggy Frog" link={"leggy-frog"} />
-        <ItemCatalogue
-          image={sunset}
-          title="Pudding cat"
-          link={"pudding-cat"}
-        />
       </div>
     </div>
   )

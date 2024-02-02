@@ -9,7 +9,9 @@ import { About } from "./features/pages/About"
 import Navbar from "./features/navigation/Navbar"
 import PilatesHome from "./features/pilates/PilatesHome"
 import { Contact } from "./features/pages/Contact"
-import Shop from "./features/pages/Shop"
+import Crochet from "./features/pages/Crochet"
+import { products } from "./features/components/crochet/ItemCatalogue"
+import { ItemPage } from "./features/components/crochet/ItemPage"
 
 export type Page = {
   location: string
@@ -22,13 +24,20 @@ export const allPages: Page[] = [
     displayValue: "Home",
   },
   {
-    location: "/shop",
-    displayValue: "Shop",
+    location: "/crochet",
+    displayValue: "Crochet",
   },
   { location: "/aboutme", displayValue: "About Me" },
   { location: "/contact", displayValue: "Contact" },
   { location: "/pilates", displayValue: "Other Projects" },
 ]
+
+const productPages = products.map((product) => {
+  return {
+    path: product,
+    element: <ItemPage />,
+  }
+})
 
 const router = createBrowserRouter([
   {
@@ -40,8 +49,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "shop",
-        element: <Shop />,
+        path: "crochet",
+        element: <Crochet />,
       },
       {
         path: "aboutme",
@@ -54,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "pilates",
         element: <PilatesHome />,
+      },
+      {
+        path: "shop/leggy-frog",
+        element: <ItemPage />,
       },
     ],
   },
